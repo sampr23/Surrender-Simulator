@@ -5,12 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="src/style/style.css">
 </head>
 <body>
     <!-- Surrender Box -->
-    <div id="surrender-box">
-        <h1></h1>
-        <button id="surrender-yes">Yes</button>
-        <button id="surrender-no">No</button>
+    <div class="surrender-box" id="surrender-box">
+        <div class="surrender-box-title">
+            <h1 >Surrender</h1>
+            <hr class="surrender-box-hr">
+        </div>
+        <div class="surrender-box-vote">
+            <div class="vote-no"></div>
+            <div class="vote-yes"></div>
+            <div class="vote-yes"></div>
+            <div class="vote-unvoted"></div>
+            <div class="vote-unvoted"></div>
+        </div>
+        <div class="surrender-timer">
+            <div class="surrender-timer-bar"></div>
+        </div>
+        <div id="surrender-box-button" class="surrender-box-button">
+            <button class="surrender-button" onclick="vote(true);" id="surrender-yes">YES</button>
+            <button class="surrender-button" onclick="vote(false);" id="surrender-no">NO</button>
+        </div>
+        <div id="surrender-result" class="surrender-result"><h1 id="vote-result">sss</h1></div>
+    </div>
 </body>
+<script src="src/js/script.js"></script>
 </html>
