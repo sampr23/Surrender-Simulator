@@ -11,13 +11,14 @@ body {
 @import url('https://fonts.cdnfonts.com/css/friz-quadrata-std');
 
 .surrender-box {
-    margin-right: 20px;
-    margin-bottom: 20vh;
+    display: none;
+    margin-right: -20px;
+    margin-bottom: 40vh;
     height: 145px;
     width: 325px;
     background-color: #161c1e;
     border: #5a5139 3px solid;
-    animation: surrenderBoxAppear 0s ease-in 20s forwards;
+    /* animation: surrenderBoxAppear 0s ease-in 20s forwards; */
 }
 
 .surrender-box-title {
@@ -129,8 +130,44 @@ body {
     }
 }
 
-@keyframes surrenderBoxAppear {
+/* @keyframes surrenderBoxAppear {
     to{
         opacity: 0;
     }
-}
+} */
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    z-index: -1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Style the button used to pause/play the video */
+  #myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #myBtn:hover {
+    background: #ddd;
+    color: black;
+  }
