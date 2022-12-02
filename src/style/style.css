@@ -1,3 +1,4 @@
+
 body {
     width: 98vw;
     height: 97vh;
@@ -12,7 +13,7 @@ body {
 @import url('https://fonts.cdnfonts.com/css/friz-quadrata-std');
 
 .surrender-box {
-    /* display: none; */
+    display: none;
     margin-right: -20px;
     margin-bottom: 40vh;
     height: 145px;
@@ -121,6 +122,18 @@ body {
     text-align: center;
     font-size: 11px;
     color: #67644b;
+}
+
+.chat-box {
+    margin-right: 73.5%;
+    margin-bottom: 12%;
+}
+.chat-input{
+    border:none;
+    width: 25vw;
+    outline: none;
+    background-color: #00000082;
+    color: #ffffff;
 }
 
 @keyframes timer {

@@ -1,3 +1,5 @@
+var gameDone = false;
+
 function vote(answer)
 {
     surrenderBoxVote = document.getElementsByClassName("vote-unvoted")[0];
@@ -33,4 +35,36 @@ function playVideo()
 {
     var video = document.getElementById("myVideo");
     video.play();
+}
+
+function showChatBox(event){
+    var chatBox = document.getElementById("chat-box");
+    var chatBoxInput = document.getElementById("chat-input");
+    if (event.key === "Enter" && chatBox.style.display == "none" && gameDone == false) {
+        
+        chatBox.style.display = "block";
+        chatBoxInput.focus();
+    }
+    else if(event.key === "Enter" && gameDone == false)
+    {
+        checkChatInput(event);
+    }
+    
+}
+
+function checkChatInput(event){
+    var chatBoxInput = document.getElementById("chat-input");
+    var surrenderBox = document.getElementById("surrender-box");
+    var chatBox = document.getElementById("chat-box");
+
+    if(event.key === "Enter" && chatBoxInput.value != "/ff" && chatBoxInput.value != "/concede" && chatBoxInput.value != "/surrender"){
+        chatBox.style.display = "none";
+        chatBoxInput.value = null;
+    }
+    else if(event.key == "Enter" && (chatBoxInput.value == "/ff" || chatBoxInput.value == "/concede" || chatBoxInput.value == "/surrender"))
+    {
+        chatBox.style.display = "none";
+        surrenderBox.style.display = "block";
+        gameDone = true;
+    }
 }
