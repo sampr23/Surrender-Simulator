@@ -6,12 +6,13 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    font-weight: bold;
 }
 
 @import url('https://fonts.cdnfonts.com/css/friz-quadrata-std');
 
 .surrender-box {
-    display: none;
+    /* display: none; */
     margin-right: -20px;
     margin-bottom: 40vh;
     height: 145px;
@@ -27,6 +28,7 @@ body {
     text-align: center;
     font-size: 11px;
     color: #7ce4be;
+    font-weight: bold;
 }
 
 .surrender-box-hr {
@@ -171,3 +173,35 @@ body {
     background: #ddd;
     color: black;
   }
+
+
+  @font-face {
+    font-family: 'Friz Quadrata Std Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Friz Quadrata Std Italic'), url('friz-quadrata-std-italic-587033b2c95df.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Friz Quadrata Std Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Friz Quadrata Std Medium'), url('friz-quadrata-std-medium-5870338ec7ef8.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Friz Quadrata Std Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Friz Quadrata Std Bold'), url('friz-quadrata-std-bold-587034a220f9f.woff') format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'Friz Quadrata Std Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Friz Quadrata Std Bold Italic'), url('friz-quadrata-std-bold-italic-587033d6d4298.woff') format('woff');
+    }
