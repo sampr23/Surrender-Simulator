@@ -77,11 +77,11 @@ function checkChatInput(event){
     var surrenderBox = document.getElementById("surrender-box");
     var chatBox = document.getElementById("chat-box");
 
-    if(event.key === "Enter" && chatBoxInput.value != "/ff" && chatBoxInput.value != "/concede" && chatBoxInput.value != "/surrender"){
+    if(event.key === "Enter" && chatBoxInput.value.toLowerCase() != "/ff" && chatBoxInput.value.toLowerCase() != "/concede" && chatBoxInput.value.toLowerCase() != "/surrender"){
         chatBox.style.display = "none";
         chatBoxInput.value = null;
     }
-    else if(event.key == "Enter" && (chatBoxInput.value == "/ff" || chatBoxInput.value == "/concede" || chatBoxInput.value == "/surrender"))
+    else if(event.key == "Enter" && (chatBoxInput.value.toLowerCase() == "/ff" || chatBoxInput.value.toLowerCase() == "/concede" || chatBoxInput.value.toLowerCase() == "/surrender"))
     {
         chatBox.style.display = "none";
         surrenderBox.style.display = "block";
