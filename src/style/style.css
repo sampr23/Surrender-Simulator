@@ -122,6 +122,7 @@ body {
     margin-bottom: 12%;
     margin-right: 73.5%;
 }
+
 .chat-input{
     background-color: #00000082;
     border:none;
@@ -155,32 +156,6 @@ body {
     z-index: -1;
 }
   
-/* Add some content at the bottom of the video/page */
-.content {
-    background: rgba(0, 0, 0, 0.5);
-    bottom: 0;
-    color: #f1f1f1;
-    padding: 20px;
-    position: fixed;
-    width: 100%;
-}
-
-/* Style the button used to pause/play the video */
-#myBtn {
-    background: #000;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 18px;
-    padding: 10px;
-    width: 200px;
-}
-
-#myBtn:hover {
-    background: #ddd;
-    color: black;
-}
-
 
 @font-face {
     font-family: 'Friz Quadrata Std Italic';
@@ -189,7 +164,6 @@ body {
     src: local('Friz Quadrata Std Italic'), url('friz-quadrata-std-italic-587033b2c95df.woff') format('woff');
 }
 
-
 @font-face {
     font-family: 'Friz Quadrata Std Medium';
     font-style: normal;
@@ -197,14 +171,12 @@ body {
     src: local('Friz Quadrata Std Medium'), url('friz-quadrata-std-medium-5870338ec7ef8.woff') format('woff');
 }
 
-
 @font-face {
     font-family: 'Friz Quadrata Std Bold';
     font-style: normal;
     font-weight: normal;
     src: local('Friz Quadrata Std Bold'), url('friz-quadrata-std-bold-587034a220f9f.woff') format('woff');
 }
-
 
 @font-face {
     font-family: 'Friz Quadrata Std Bold Italic';
