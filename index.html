@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Surrender Simulator</title>
     <link rel="stylesheet" href="src/style/style.css">
 </head>
+
 <body onkeypress="showChatBox(event);">
     <!-- Video In the background -->
     <video id="myVideo">
@@ -20,9 +22,10 @@
     <!-- Surrender Box -->
     <div class="surrender-box" id="surrender-box">
         <div class="surrender-box-title">
-            <h1 >Surrender</h1>
+            <h1>Surrender</h1>
             <hr class="surrender-box-hr">
         </div>
+        <!-- The user Votes 5 box -->
         <div class="surrender-box-vote">
             <div class="vote-unvoted"></div>
             <div class="vote-unvoted"></div>
@@ -30,15 +33,20 @@
             <div class="vote-unvoted"></div>
             <div class="vote-unvoted"></div>
         </div>
+        <!-- Timer bar -->
         <div class="surrender-timer">
             <div class="surrender-timer-bar"></div>
         </div>
+        <!-- Surrender button Yes & No -->
         <div id="surrender-box-button" class="surrender-box-button">
             <button class="surrender-button" onclick="vote(true);" id="surrender-yes">YES</button>
             <button class="surrender-button" onclick="vote(false);" id="surrender-no">NO</button>
         </div>
-        <div id="surrender-result" class="surrender-result"><h1 id="vote-result"></h1></div>
+        <div id="surrender-result" class="surrender-result">
+            <h1 id="vote-result"></h1>
+        </div>
     </div>
 </body>
 <script src="src/js/script.js"></script>
+
 </html>

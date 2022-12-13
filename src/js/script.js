@@ -59,6 +59,7 @@ function hideSurrenderButton(answer)
 function playVideo()
 {
     var video = document.getElementById("myVideo");
+    gameDone = true;
     video.play();
 }
 
@@ -92,6 +93,5 @@ function checkChatInput(event){
     {
         chatBox.style.display = "none";
         surrenderBox.style.display = "block";
-        gameDone = true;
     }
 }
