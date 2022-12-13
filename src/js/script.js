@@ -1,8 +1,9 @@
 var gameDone = false;
 
+
+//Function to turn the divs into voted divs depending on the answer
 function vote(answer)
 {
-    // console.log("hello world")
     surrenderBoxVote = document.getElementsByClassName("vote-unvoted")[0];
     secondBox = document.getElementsByClassName("vote-unvoted")[1];
     if(answer == true)
@@ -33,11 +34,14 @@ function vote(answer)
     hideSurrenderButton(answer);
 }
 
+
+//Turn the div into a vote-yes div
 function fillVote(index)
 {
     document.getElementsByClassName("vote-unvoted")[0].className = "vote-yes";
 }
 
+//Hide the surrender Yes or No button and show the result
 function hideSurrenderButton(answer)
 {
     surrenderBox = document.getElementById("surrender-box-button");
@@ -51,12 +55,14 @@ function hideSurrenderButton(answer)
     playVideo();
 }
 
+//Play the video in the backGround
 function playVideo()
 {
     var video = document.getElementById("myVideo");
     video.play();
 }
 
+//Function to show the input in the chat
 function showChatBox(event){
     var chatBox = document.getElementById("chat-box");
     var chatBoxInput = document.getElementById("chat-input");
@@ -72,6 +78,7 @@ function showChatBox(event){
     
 }
 
+//Function to check if the input is a surrender command
 function checkChatInput(event){
     var chatBoxInput = document.getElementById("chat-input");
     var surrenderBox = document.getElementById("surrender-box");
@@ -88,5 +95,3 @@ function checkChatInput(event){
         gameDone = true;
     }
 }
-
-
