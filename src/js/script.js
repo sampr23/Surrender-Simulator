@@ -2,20 +2,40 @@ var gameDone = false;
 
 function vote(answer)
 {
+    // console.log("hello world")
     surrenderBoxVote = document.getElementsByClassName("vote-unvoted")[0];
     secondBox = document.getElementsByClassName("vote-unvoted")[1];
     if(answer == true)
     {
         surrenderBoxVote.className = "vote-yes";
-        setTimeout(function(){secondBox.className = "vote-no";}, 1000);
+        setTimeout(function(){
+            secondBox.className = "vote-no";
+            secondBox.className = "vote-yes";
+            for (var index = 0; index < 3; index++) {
+                (function(index) {
+                    setTimeout(function() { fillVote(index); }, index * 500);
+                })(index);
+            }
+        }, 1000);
     }
     else
     {
         surrenderBoxVote.className = "vote-no";
-        setTimeout(function(){secondBox.className = "vote-yes";}, 1000);
+        setTimeout(function(){
+            secondBox.className = "vote-yes";
+            for (var index = 0; index < 3; index++) {
+                (function(index) {
+                    setTimeout(function() { fillVote(index); }, index * 500);
+                })(index);
+            }
+        }, 1000);
     }
-
     hideSurrenderButton(answer);
+}
+
+function fillVote(index)
+{
+    document.getElementsByClassName("vote-unvoted")[0].className = "vote-yes";
 }
 
 function hideSurrenderButton(answer)
@@ -68,3 +88,5 @@ function checkChatInput(event){
         gameDone = true;
     }
 }
+
+
