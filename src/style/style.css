@@ -1,98 +1,98 @@
 @import url('https://fonts.cdnfonts.com/css/friz-quadrata-std');
 
 body {
-    display: flex;
-    width: 98vw;
-    height: 97vh;
-    background-color: black;
-    font-family: 'Friz Quadrata Std', sans-serif;
-    justify-content: flex-end;
     align-items: flex-end;
+    background-color: black;
+    display: flex;
+    font-family: 'Friz Quadrata Std', sans-serif;
     font-weight: bold;
+    height: 97vh;
+    justify-content: flex-end;
+    width: 98vw;
 }
 
 .surrender-box {
+    /* animation: surrenderBoxAppear 0s ease-in 20s forwards;   */
     display: none;
-    margin-right: -20px;
-    margin-bottom: 40vh;
-    height: 145px;
-    width: 325px;
     background-color: #161c1e;
     border: #5a5139 3px solid;
-    /* animation: surrenderBoxAppear 0s ease-in 20s forwards;   */
+    height: 145px;
+    margin-right: -20px;
+    margin-bottom: 40vh;
+    width: 325px;
 }
 
 .surrender-box-title {
-    margin-top: -7px;
-    text-shadow: 0 1px 3px black;
-    text-align: center;
-    font-size: 11px;
     color: #7ce4be;
+    margin-top: -7px;
+    text-align: center;
+    text-shadow: 0 1px 3px black;
+    font-size: 11px;
     font-weight: bold;
 }
 
 .surrender-box-hr {
-    width: 90%;
-    border: 0;
-    margin-top: -10px;
-    height: 2px;
     background-image: linear-gradient(to right, rgba(90, 81, 57, 0), rgb(67, 60, 42), rgba(90, 81, 57, 0));
+    border: 0;
+    height: 2px;
+    margin-top: -10px;
+    width: 90%;
 }
 
 .surrender-box-vote {
     display: flex;
+    height: 18px;
     justify-content: center;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
     width: 90%;
-    height: 18px;
 }
 
 .vote-yes {
     background-color: #008e25;
     border: black 2px solid;
-    width: 50%;
     height: 100%;
+    width: 50%;
 }
 
 .vote-no {
     background-color: #741616;
     border: black 2px solid;
-    width: 50%;
     height: 100%;
+    width: 50%;
 }
 
 .vote-unvoted {
     background-color: #323232;
     border: black 2px solid;
-    width: 50%;
     height: 100%;
+    width: 50%;
 }
 
 .surrender-timer-bar {
 
-    margin-top: 12px;
-    height: 10px;
-    width: 0%;
-    background-image: linear-gradient(to right, #0b4d4b, #45fdfd);
     animation: timer 20s linear;
+    background-image: linear-gradient(to right, #0b4d4b, #45fdfd);
+    height: 10px;
+    margin-top: 12px;
+    width: 0%;
 }
 
 .surrender-timer {
     background-color: black;
-    margin-top: 12px;
-    margin-right: auto;
-    margin-left: auto;
     height: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
     width: 90%;
 }
 
 .surrender-box-button {
-    display: flex;
-    margin-top: 10px;
     color: #83856d;
+    display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .surrender-button {
@@ -101,33 +101,33 @@ body {
     border-style: solid;
     background-image: linear-gradient(to top, #192a25, #27423b, #192a25);
     border-image: linear-gradient(to top, #5a5139, #9da083) 1;
-    height: 30px;
-    width: 40%;
-    margin-right: 17px;
-    margin-left: 17px;
     color: #83856d;
-    font-size: 22px;
-    letter-spacing: -1px;
     cursor: pointer;
+    font-size: 22px;
+    height: 30px;
+    letter-spacing: -1px;
+    margin-left: 17px;
+    margin-right: 17px;
+    width: 40%;
 }
 
 .surrender-result {
-    display: none;
-    text-align: center;
-    font-size: 11px;
     color: #67644b;
+    display: none;
+    font-size: 11px;
+    text-align: center;
 }
 
 .chat-box {
-    margin-right: 73.5%;
     margin-bottom: 12%;
+    margin-right: 73.5%;
 }
 .chat-input{
-    border:none;
-    width: 25vw;
-    outline: none;
     background-color: #00000082;
+    border:none;
     color: #ffffff;
+    outline: none;
+    width: 25vw;
 }
 
 @keyframes timer {
@@ -147,68 +147,68 @@ body {
 
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
+    bottom: 0;
+    min-height: 100%;
+    min-width: 100%;
     position: fixed;
     right: 0;
-    bottom: 0;
     z-index: -1;
-    min-width: 100%;
-    min-height: 100%;
-  }
+}
   
-  /* Add some content at the bottom of the video/page */
-  .content {
-    position: fixed;
-    bottom: 0;
+/* Add some content at the bottom of the video/page */
+.content {
     background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
     color: #f1f1f1;
-    width: 100%;
     padding: 20px;
-  }
-  
-  /* Style the button used to pause/play the video */
-  #myBtn {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
-    border: none;
+    position: fixed;
+    width: 100%;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
     background: #000;
+    border: none;
     color: #fff;
     cursor: pointer;
-  }
-  
-  #myBtn:hover {
+    font-size: 18px;
+    padding: 10px;
+    width: 200px;
+}
+
+#myBtn:hover {
     background: #ddd;
     color: black;
-  }
+}
 
 
-  @font-face {
+@font-face {
     font-family: 'Friz Quadrata Std Italic';
     font-style: normal;
     font-weight: normal;
     src: local('Friz Quadrata Std Italic'), url('friz-quadrata-std-italic-587033b2c95df.woff') format('woff');
-    }
-    
+}
 
-    @font-face {
+
+@font-face {
     font-family: 'Friz Quadrata Std Medium';
     font-style: normal;
     font-weight: normal;
     src: local('Friz Quadrata Std Medium'), url('friz-quadrata-std-medium-5870338ec7ef8.woff') format('woff');
-    }
-    
+}
 
-    @font-face {
+
+@font-face {
     font-family: 'Friz Quadrata Std Bold';
     font-style: normal;
     font-weight: normal;
     src: local('Friz Quadrata Std Bold'), url('friz-quadrata-std-bold-587034a220f9f.woff') format('woff');
-    }
-    
+}
 
-    @font-face {
+
+@font-face {
     font-family: 'Friz Quadrata Std Bold Italic';
     font-style: normal;
     font-weight: normal;
     src: local('Friz Quadrata Std Bold Italic'), url('friz-quadrata-std-bold-italic-587033d6d4298.woff') format('woff');
-    }
+}
